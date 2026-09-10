@@ -17,6 +17,14 @@ const siteUrl = "https://asiafoolad.com";
     <meta property="og:type" content="website" />
     <meta property="og:image" content={`${siteUrl}/images/logo.png`} />
     <title>{title}</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{title}",
+        "url": "{siteUrl}"
+      }
+    </script>
     <link
       rel="preload"
       href="/fonts/Estedad-Regular.woff2"
