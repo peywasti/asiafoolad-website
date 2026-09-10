@@ -17,24 +17,6 @@ const siteUrl = "https://asiafoolad.com";
     <meta property="og:type" content="website" />
     <meta property="og:image" content={`${siteUrl}/images/logo.png`} />
     <title>{title}</title>
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: title,
-        url: siteUrl,
-      })}
-    ></script>
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: title,
-        url: siteUrl,
-      })}
-    ></script>
     <link
       rel="preload"
       href="/fonts/Estedad-Regular.woff2"
@@ -130,5 +112,22 @@ const siteUrl = "https://asiafoolad.com";
         <a href="https://fooladgharb.com">گروه صنعتی فولادغرب</a> مراجعه نمایید.
       </p>
     </div>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: title,
+          url: siteUrl,
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: title,
+          url: siteUrl,
+        },
+      ])}
+    ></script>
   </body>
 </html>
